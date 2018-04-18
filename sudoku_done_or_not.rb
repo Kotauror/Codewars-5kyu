@@ -28,20 +28,18 @@ end
 
 def count_sorted_squares(board)
   counter = 0
-
   newboard = []
-
-  newboard.push(board[0][0..2] + board[1][0..2] + board[2][0..2])
-  newboard.push(board[3][0..2] + board[4][0..2] + board[5][0..2])
-  newboard.push(board[6][0..2] + board[7][0..2] + board[8][0..2])
-
-  newboard.push(board[0][3..5] + board[1][3..5] + board[2][3..5])
-  newboard.push(board[3][3..5] + board[4][3..5] + board[5][3..5])
-  newboard.push(board[6][3..5] + board[7][3..5] + board[8][3..5])
-
-  newboard.push(board[0][6..8] + board[1][6..8] + board[2][6..8])
-  newboard.push(board[3][6..8] + board[4][6..8] + board[5][6..8])
-  newboard.push(board[6][6..8] + board[7][6..8] + board[8][6..8])
+  newboard.push(
+    (board[0][0..2] + board[1][0..2] + board[2][0..2]),
+    (board[3][0..2] + board[4][0..2] + board[5][0..2]),
+    (board[6][0..2] + board[7][0..2] + board[8][0..2]),
+    (board[0][3..5] + board[1][3..5] + board[2][3..5]),
+    (board[3][3..5] + board[4][3..5] + board[5][3..5]),
+    (board[6][3..5] + board[7][3..5] + board[8][3..5]),
+    (board[0][6..8] + board[1][6..8] + board[2][6..8]),
+    (board[3][6..8] + board[4][6..8] + board[5][6..8]),
+    (board[6][6..8] + board[7][6..8] + board[8][6..8])
+  )
 
   newboard.each { |row|
     if row.sort == [1,2,3,4,5,6,7,8,9] then
